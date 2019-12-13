@@ -136,7 +136,7 @@ declare class SpineGameObject extends Phaser.GameObjects.GameObject {
     /**
      * The Spine Animation State this Game Object is using.
      */
-    // state: spine.AnimationState;
+    state: spine.AnimationState;
 
     /**
      * The Spine Animation State Data associated with the Animation State this Game Object is using.
