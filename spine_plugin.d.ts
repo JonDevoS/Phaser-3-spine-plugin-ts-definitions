@@ -104,6 +104,25 @@ declare class SpineGameObject extends Phaser.GameObjects.GameObject {
      */
     constructor(scene: Phaser.Scene, pluginManager: SpinePlugin, x: number, y: number, key?: string, animationName?: string, loop?: boolean);
     /**
+     * The angle of this Game Object as expressed in degrees.
+     * 
+     * Phaser uses a right-hand clockwise rotation system, where 0 is right, 90 is down, 180/-180 is left
+     * and -90 is up.
+     * 
+     * If you prefer to work in radians, see the `rotation` property instead.
+     */
+    angle: integer;
+
+    /**
+     * The angle of this Game Object in radians.
+     * 
+     * Phaser uses a right-hand clockwise rotation system, where 0 is right, 90 is down, 180/-180 is left
+     * and -90 is up.
+     * 
+     * If you prefer to work in degrees, see the `angle` property instead.
+     */
+    rotation: number;
+    /**
      * The visible state of the Game Object.
      * 
      * An invisible Game Object will skip rendering, but will still process update logic.
@@ -136,7 +155,7 @@ declare class SpineGameObject extends Phaser.GameObjects.GameObject {
     /**
      * The Spine Animation State this Game Object is using.
      */
-    state: spine.AnimationState;
+    // state: spine.AnimationState;
 
     /**
      * The Spine Animation State Data associated with the Animation State this Game Object is using.
